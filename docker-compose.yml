@@ -1,0 +1,24 @@
+services:
+  feedlot:
+    image: "marginalia/feedlot"
+    container_name: "feedlot"
+    ports:
+      - "8080:8080"
+    env_file:
+      - "run/service.env"
+    volumes:
+      - db:/db
+      - data:/data
+volumes:
+    db:
+      driver: local
+      driver_opts:
+        type: "none"
+        device: "run/db"
+        o: "bind"
+    data:
+      driver: local
+      driver_opts:
+        type: "none"
+        device: "run/data"
+        o: "bind"
