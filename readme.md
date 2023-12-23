@@ -61,7 +61,7 @@ By default the API listens on port 8080.
       "url": "https://www.marginalia.nu/log/96_frivolous_asn/"
     },
     { ... }
-  ]
+  }
 ]
 ```
 
